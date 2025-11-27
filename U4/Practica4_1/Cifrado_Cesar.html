@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4.1: Cifrado estilo César</title>
+</head>
+
+<body>
+    <script>
+        let texto = prompt("Escriba el texto que desea cifrar");
+        let clave;
+        do {
+
+            clave = prompt("Escriba la clave (un número entero)")
+            if (isNaN(Number(clave))) {
+
+                alert("No has escrito un número");
+
+            }
+
+        } while (isNaN(Number(clave)));
+        clave = parseInt(clave); //si hay decimales los quitamos lo convertimos a entero
+        
+        //Recorremos el array de texto y lo introducimos en letra
+        // para convertirlo en charcode y poder sumarle la clave
+        // al codigo del char de la letra
+        for (let letra of texto) {
+
+            let cifra = letra.charCodeAt(letra) + clave;
+            document.write(String.fromCharCode(cifra));
+
+        }
+    </script>
+</body>
+
+</html>
