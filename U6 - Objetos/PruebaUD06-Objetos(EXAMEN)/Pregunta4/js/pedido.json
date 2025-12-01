@@ -1,0 +1,20 @@
+{"Pedido":[
+    {"idPedido": 1},
+    {"cliente": "Manolo"},
+    {"total": 35},
+    {"productos":[
+        {"idProducto": 1},
+        {"nombre": "Raton Pro"},
+        {"descripcion": "Esto es un Raton Profesional"},
+        {"precio": 20},
+        {"cantidad": 1},
+        {"subtotal": 20}
+    ,
+        {"idProducto": 2},
+        {"nombre": "Raton Simple"},
+        {"descripcion": "Esto es un Raton muy simple"},
+        {"precio": 5},
+        {"cantidad": 3},
+        {"subtotal": 15}
+    ]}
+]}  
