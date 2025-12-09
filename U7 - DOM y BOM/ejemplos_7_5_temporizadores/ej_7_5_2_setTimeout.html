@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mensaje">Espera 3 segundos...</p>
+
+    <script>
+        
+        setTimeout(() => {
+            document.getElementById("mensaje").textContent = "¡Tiempo cumplido!";
+        }, 3000); // 3000 ms = 3 segundos
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="contador">0</p>
+
+    <script>
+        
+        let i = 0;
+        let intervalo = setInterval(() => {
+            i++;
+            document.getElementById("contador").textContent = i;
+            if (i >= 10) {
+                clearInterval(intervalo); // detener cuando i = 10
+            }
+
+        }, 1000); // cada 1 segundo
+
+    </script>
+
+
+</body>
+</html>
