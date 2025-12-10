@@ -130,7 +130,7 @@ function inicializar() {
   // Mensaje de bienvenida usando temporizador
   setTimeout(() => {
     alert("¡Bienvenido a tu lista de tareas!");
-  }, 500);
+  }, 5000); // 5 segundos de retardo en la bienvenida
 }
 
 // --- Eventos ---
