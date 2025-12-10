@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4.2: Cifrado estilo polialfabético</title>
+</head>
+
+<body>
+    <script>
+        let texto = prompt("Escriba el texto que desea cifrar");
+        let clave = prompt("Escriba la clave (una serie de números");
+        let i = 0; //i se encarga de recorrer las cifras de la clave
+        //Recorremos el array de texto y lo introducimos en letra
+        // para convertirlo en charcode y poder sumarle la clave
+        // en este caso una succesion de números que iran cifrandose
+        // la letra 1 con la clave 1 y asi sucesivamente
+        for (let letra of texto) {
+
+            let cifra = letra.charCodeAt(letra) + Number(clave.charAt(i));
+            document.write(String.fromCharCode(cifra));
+            //Incrementamos i con cada vuelta al bucle for
+            i++;
+            //Si llegamos al final de la clave, vuelve a empezar
+            if (i == clave.length) i = 0;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="miLink" href="#">Enlace</a>
+     <button type="button" id="btnCambiar">Cambiar</button>
+    <script>
+        let link = document.getElementById("miLink");
+        //Elemento del DOM
+        let btnCambiarElemento = document.getElementById("btnCambiar");
+
+        //asigno manejador de enveto
+        btnCambiarElemento.addEventListener("click", function(){
+            
+            //obtener la referencia al elemento DOM
+            link.href = "https://www.google.com";
+            link.textContent = "Ir a Google";
+        });
+
+    </script>
+
+</body>
+</html>

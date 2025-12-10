@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let fecha = new Date();
+        fecha.setTime(fecha.getTime() + (7*24*60*60*1000)); // 7 días
+        
+        document.cookie = "usuario=Ana; expires=" + fecha.toUTCString() + "; path=/";
+
+
+    </script>
+</body>
+</html>

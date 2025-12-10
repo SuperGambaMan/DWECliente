@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body class="p-5">
+      <h1>Trabajo 3</h1>
+      <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Numero 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="txtNumero1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Numero 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="txtNumero2"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <button type="button" class="btn btn-primary" id="btnSumar">Sumar</button>
+          <button type="button" class="btn btn-secondary" id="btnRestar">Restar</button>
+          <button type="button" class="btn btn-success" id="btnMultiplicar">Multiplicar</button>
+          <br><br>
+          <h5>Resultado de <span id="resultOp"></span></h5>
+    </form>
+
+    <!-- Enlazo el script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

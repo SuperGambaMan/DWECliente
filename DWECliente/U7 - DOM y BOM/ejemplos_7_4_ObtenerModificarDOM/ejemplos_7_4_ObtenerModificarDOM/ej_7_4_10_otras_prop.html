@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .activo{
+            background-color: "grey";
+            padding: 8px;
+            border: 1px solid red;
+        }
+        .resaltar{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p id="clase">Texto</p>
+
+    <ul>
+        <li class="menu">menu1</li>
+        <li class="menu">menu2</li>
+        <li class="menu">menu3</li>
+    </ul>
+
+    <script>
+        
+        let p = document.getElementById("clase");
+        p.classList.add("resaltar");
+        p.classList.toggle("activo");
+        
+        let clon = p.cloneNode(true);
+        
+        document.body.appendChild(clon);
+        
+        p.scrollIntoView();
+
+        let li = document.getElementsByClassName("menu");
+
+        li[2].classList.toggle("resaltar")
+        
+        let resaltar = document.getElementsByClassName("resaltar");
+        resaltar.style.backgroundColor="green";
+
+    </script>
+
+</body>
+</html>

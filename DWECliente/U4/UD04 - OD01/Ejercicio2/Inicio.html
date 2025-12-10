@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body class="p-5">
+      <h1>Ejercicio 2</h1>
+      <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Filas</label>
+            <input
+              type="text"
+              class="form-control"
+              id="txtFilas"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Columnas</label>
+            <input
+              type="text"
+              class="form-control"
+              id="txtColumnas"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Numero Máximo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="txtNumeroMaximo"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <button type="button" class="btn btn-primary" id="btnMatriz">mostrar matriz</button>
+          <br><br>
+          <h5>Resultado: </h5>
+          <br>
+          <span id="resultTabla"></span>
+    </form>
+
+    <!-- Enlazo el script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
