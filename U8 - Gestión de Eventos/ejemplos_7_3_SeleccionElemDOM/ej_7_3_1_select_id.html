@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mensaje">Texto original</p>
+    
+    <button id="btnCambiar">Cambiar</button>
+    <script>
+        //Cogemos el elemento del DOM por la id "mensaje"
+        let p = document.getElementById("mensaje");
+        //Configuramos el Manejador de eventos por un click en el btnCambiar
+        let btnCambiarElemento = addEventListener("click", function () {
+            //Modificamos el texto original
+            p.textContent = "Texto modificado usando ID";
+        });
+    </script>
+
+</body>
+</html>
