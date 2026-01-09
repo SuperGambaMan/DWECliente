@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos CrossBrowser</title>
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/boostrap.min.css" />
+
+    <style>
+      body {
+        transition: background-color 0.5s ease;
+      }
+    </style>
+  </head>
+  <body class="py-4 px-4">
+    <h1>
+      Eventos - CrossBrowser Events (IE/Mozilla) - Modelo delegado de eventos
+    </h1>
+    <hr />
+
+    <div class="card">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">Color de Fondo <span id="colorFondo"></span></h5>
+        <p class="card-text">Color generado aleatoriamente</p>
+        <ul id="miNav">
+          <li><a href="#nosotros">¿Quienes Somos?</a></li>
+          <li><a href="#objetivos">Los objetivos</a></li>
+          <li><a href="#equipo">Nuestro Equipo</a></li>
+          <li><a href="#detalles">Más detalles</a></li>
+          <li><a href="#contacta">Contactanos</a></li>
+        </ul>
+      </div>
+    </div>
+    <br />
+    <br />
+    <button id="btn" type="button" class="btn btn-warning">Boton</button>
+
+    <br /><br />
+    <pre>
+        <b>Ejercicio</b>
+        Crear un documento con html, css y javascript donde la incluyas.
+        Genera el código javascript en un archivo javascript separado llamado "script.js"
+        Usa el modelo delegado de eventos sobre un manejador de eventos crossbrowser (visto en punto anterior), 
+        para capturar el evento onclick sobre cada uno de los elementos de la lista (elementos a )
+        Se hará sobre el elemento común a todos ellos (elemento < ul id="miNav" > ) que será al que 
+        delegaremos la gestión de los eventos. Crear dicho manejador de eventos click sobre este único elemento.
+        Al hacer click sobre cada elemento de la lista, se cambiará su color de fondo con un color aleatorio.
+
+      </pre
+    >
+    <script src="js/script.js"></script>
+  </body>
+</html>

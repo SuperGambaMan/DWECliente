@@ -1,0 +1,70 @@
+Ejercicio 1 - Manejador de eventos crossbrowser. (5P)
+Dado el código que se entrega:
+Se pide:
+Crea un manejador de eventos crossbrowser (que soporte distintos navegadores )
+Aplicado al ejercicio que se entrega dicho código.
+Utiliza el capítulo de teoría para crearlo.
+Úsalo para el evento "click" de los botones que cambiar el color de fondo de la página.
+
+Ejercicio 2 Modelo delegado de eventos (obtener la fuente del evento de e.target | e.srcElement) (5P)
+Dada la siguiente lista:
+<ul id="miNav">
+    <li><a href="#nosotros">¿Quienes Somos?</a></li>
+    <li><a href="#objetivos">Los objetivos</a></li>
+    <li><a href="#equipo">Nuestro Equipo</a></li>
+    <li><a href="#detalles">Más detalles</a></li>
+    <li><a href="#contacta">Contactanos</a></li>
+ </ul>
+
+Se pide:
+Crear un documento con html, css y javascript donde la incluyas.
+Genera el código javascript en un archivo javascript separado llamado "script.js"
+Usa el modelo delegado de eventos sobre un manejador de eventos crossbrowser (visto en punto anterior), para capturar el evento onclick sobre cada uno de los elementos de la lista (elementos a )
+Se hará sobre el elemento común a todos ellos (elemento  <ul id="miNav"> ) que será al que delegaremos la gestión de los eventos. Crear dicho manejador de eventos click sobre este único elemento.
+Al hacer click sobre cada elemento de la lista, se cambiará su color de fondo con un color aleatorio.
+
+Nota:
+Cada ejercicio deberá ser creado en una carpeta separada.
+
+Ejercicio 1 - carpeta ejercicio01
+Ejercicio 2.- carpeta ejercicio02
+Se te entrega los capítulos de teoría donde te puedes apoyar para su desarrollo y solución (material único que se podrá usar).
+
+Realizar el ejercicio libre de errores. En correcto funcionamiento.
+Bien formateado el código.
+Responder exactamente a lo que se pide y como se pide.
+Utilizar exactamente lo que se pide con la técnica correcta.
+No usar ninguna IA o chatGPT, etc. Comprobar que eres el autor de lo presentado...
+Solo puedes usar los archivos que se te entregan. 
+No se usará Internet en dicha prueba.
+
+
+
+Entregar código libre de errores.
+
+Realizar comentarios en el código de lo que se está haciendo (justificarlo)
+
+Crear la funciones exactamente con el nombre y parámetro que se pidan.
+
+Las preguntas están en los apartados del archivo que se te entrega.
+
+Corregir el código o introducir algo que sea necesario para resolver los ejercicios.
+
+No usar nada que no se haya explicado en clase o no esté en el temario de la Unidad Didáctica, o que no tenga que ver con el tema
+
+tratado de este tipo de prueba.
+Prueba evaluativa obligatoria para todos los alumnos.
+Puntuación: 10 Puntos.
+
+Resultado de Aprendizaje: 
+RA 5. Desarrolla aplicaciones Web interactivas integrando mecanismos de manejo de eventos    . 
+
+Criterios de Evaluación:
+a) Se han reconocido las posibilidades del lenguaje de marcas relativas a la captura de los eventos producidos.
+b) Se han identificado las características del lenguaje de programación relativas a la gestión de los eventos.
+c) Se han diferenciado los tipos de eventos que se pueden manejar.
+d) Se ha creado un código que capture y utilice eventos.
+e) Se han reconocido las capacidades del lenguaje relativas a la gestión de formularios Web.
+f) Se han validado formularios web utilizando eventos.
+g) Se han utilizado expresiones regulares para facilitar los procedimientos de validación.
+h) Se ha probado y documentado el código.
