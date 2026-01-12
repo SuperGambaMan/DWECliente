@@ -1,72 +1,15 @@
-<!-- Práctica 7.1: Añadir un párrafo
-• En editores como Visual Studio Code, que tienen el módulo Emmet incorporado, se pueden
-crear párrafos con el texto clásico de pruebas "Lorem ipsum...". Si estando en el body de una
-nueva página web escribimos ol > 1 i*9> lorem y luego pulsamos el tabulador, se crearán 9
-párrafos numerados con el texto en cuestión.
-
-• Una vez creados los párrafos la página consistirá en pedir al usuario un texto y un número
-(del 1 al 10) para la posición de ese texto. El texto se mostrará en negrita
-
-• Se mostrará el párrafo (sin eliminar ninguno de los anteriores) en la posición indicada. Si se
-indica el 3, se dejarán sin cambiar el primer y segundo párrafos iniciales, el nuevo se colocará
-como tercer y el que antes era el tercero, ahora será el cuarto y así sucesivamente.
-
-• Si el número no está en ese rango (o no es un número) se avisa del error y se pide de nuevo.
-
-• Si el usuario cancela, la aplicación no hace nada.
- -->
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Práctica 7.1: Añadir un párrafo</title>
-</head>
-<body>
-    <ol>
-        <li>Mollitia eos nulla atque quae tenetur facere corrupti ipsum quas nemo, illum fugit? Nisi placeat nobis quis quo pariatur neque eos, sit ab distinctio dicta sunt corporis aliquam tempora eius.</li>
-        <li>Nobis dolor minima laborum quod quibusdam iure esse ex? Provident voluptas labore sunt ullam unde rem veniam neque veritatis officiis accusamus magni, ipsum nulla, tenetur asperiores a odit temporibus amet.</li>
-        <li>Ea aspernatur assumenda, repudiandae minus, ratione nesciunt vitae fuga delectus incidunt laboriosam, nisi amet mollitia qui aliquam! Culpa ratione, molestiae vel, eligendi recusandae laudantium similique maiores quos fuga accusamus ex?</li>
-        <li>At autem possimus magnam numquam provident adipisci aliquam eaque quidem tempora ex nesciunt molestiae dolorem corporis, placeat iste hic, facilis totam rem officia ratione, cupiditate quisquam? Laborum aliquid dolore dolores.</li>
-        <li>Quis quasi provident itaque. Totam dolorem ipsam necessitatibus architecto unde qui doloremque modi molestiae incidunt a ad reprehenderit, deleniti ullam at culpa blanditiis odio ipsa commodi perspiciatis enim iusto quae.</li>
-        <li>Facere laboriosam dicta repellat cumque consequatur hic pariatur doloribus exercitationem distinctio, sequi a cum culpa quam laborum dolorem cupiditate dignissimos magni quo dolorum et unde vero reprehenderit minima. Ullam, iure?</li>
-        <li>Quaerat voluptatum odit ab fugit reiciendis eius molestiae natus. Consequuntur, perferendis! Quas exercitationem dolorem magnam hic! Corrupti ea ratione unde error, minima cum enim quaerat eaque debitis quas. Culpa, magnam.</li>
-    </ol>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Práctica 8.2: Tecla que pone imagen de fondo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="imagen">
+      <h1>Pulsa <kbd>Alt + F12</kbd> para cambiar la imagen de fondo</h1>
+    </div>
 
-    <script>
-        var texto = prompt("Escribe el texto que desees");
-        var posicion;
-        
-        if (texto != null) {
-            do {
-                posicion = prompt("Escriba la posición de ese texto (número del 1 al 10)");
-                
-                if (posicion != null) {
-                    posicion = parseInt(Number(posicion));
-                    if (isNaN(posicion) || posicion < 1 || posicion > 10) {
-                        alert("Número no válido");
-                    }
-                }
-            } while (posicion != null && (isNaN(posicion) || posicion < 1 || posicion > 10));
-            
-            // Colocación del texto en su posición
-            if (posicion != null) {
-                var lista = document.getElementsByTagName("ol")[0];
-                var nuevoElemento = document.createElement("li");
-                nuevoElemento.innerHTML = `<strong>${texto}</strong>`;
-                
-                if (posicion == 10) {
-                    // Si el número es el 10 se añade al final
-                    lista.appendChild(nuevoElemento);
-                } else {
-                    // Si no se añade delante de la posición indicada
-                    // Se resta uno porque se numera desde el 0
-                    let liSiguiente = lista.children[posicion - 1];
-                    lista.insertBefore(nuevoElemento, liSiguiente);
-                }
-            }
-        }
-    </script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

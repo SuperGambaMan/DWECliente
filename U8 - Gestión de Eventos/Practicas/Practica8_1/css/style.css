@@ -1,0 +1,12 @@
+/* Le damos estillo al cartel que seguira nuestro raton */
+#cHola {
+  background-color: yellow;
+  color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 4px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
