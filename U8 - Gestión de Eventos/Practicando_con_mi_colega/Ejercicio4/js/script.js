@@ -1,106 +1,156 @@
-/* 📁 Ejercicio 03 – Formularios + eventos (extra para subir nota)
-Enunciado
-Crea un formulario con los siguientes campos:
-Nombre (text)
+/* 📝 EJERCICIO 4 – PROPAGACIÓN DE EVENTOS (CAPTURA Y BURBUJA)
+Puntuación: 5 puntos
+
+📌 ENUNCIADO
+Dado el siguiente HTML:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <style>
+        #contenedor {
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        #boton {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="contenedor">
+        Contenedor
+        <div id="caja">
+            Caja
+            <button id="boton">Púlsame</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
 
 
-Email (email)
+📌 SE PIDE
+Crear el archivo script.js.
 
 
-Checkbox “Acepto las condiciones”
+Crear un manejador de eventos crossbrowser usando el modelo visto en clase.
 
 
-Botón Enviar
+Asociar un evento click a:
 
 
-Se pide:
-Capturar el evento submit del formulario.
+El div#contenedor
 
 
-Evitar el envío si:
+El div#caja
 
 
-Algún campo está vacío
+El button#boton
 
 
-El checkbox no está marcado
+Al hacer click:
 
 
-Mostrar un mensaje de error usando alert().
+Mostrar en consola qué elemento ha sido pulsado.
 
 
-Si todo es correcto:
+Usar fase de burbuja para todos los eventos.
 
 
-Mostrar por consola los datos introducidos
+Evitar que el evento siga propagándose cuando se haga click en el botón.
 
 
-Usar correctamente:
+
+📌 RESTRICCIONES (EXAMEN)
+❌ No usar librerías
+ ❌ No usar onclick en HTML
+ ❌ No usar código no visto en clase
+ ❌ Código comentado
+ ❌ Uso obligatorio de event y target
+
+🎯 PISTAS (NO SOLUCIÓN)
+Usa addEventListener(type, fn, false)
 
 
-event.preventDefault()
+Para detener la propagación:
 
 
-Propiedades del formulario (value, checked)
+event.stopPropagation()
 
 
-Código comentado y sin errores.
- */
+event.cancelBubble = true (IE)
+
+
+El orden de ejecución importa
+
+
+
+🧠 QUÉ SE EVALÚA AQUÍ
+✔ Propagación de eventos
+ ✔ Burbuja
+ ✔ stopPropagation()
+ ✔ Uso correcto de event.target
+ ✔ Control del flujo de eventos */
 
 //Añadimos el evento agregar
 var eventos = {
-    agregar: null
-}
+  agregar: null,
+};
 
 //Compatibilidad con otros navegadores modernos y antiguos
-if(typeof window.addEventListener ==='function'){
-    eventos.agregar = function (el, type, fn){
-        el.addEventListener(type, fn, false);
-    };   
+if (typeof window.addEventListener === "function") {
+  eventos.agregar = function (el, type, fn) {
+    el.addEventListener(type, fn, false);
+  };
 } else {
-    eventos.agregar = function (el, type, fn){
-        el.attachEvent('on' + type, fn);
-    }
+  eventos.agregar = function (el, type, fn) {
+    el.attachEvent("on" + type, fn);
+  };
 }
 
 //Capturamos la ID de todos los campos y del formulario
-var formulario = document.getElementById('formulario');
-var nombre = document.getElementById('nombre');
-var email = document.getElementById('email');
-var checkbox = document.getElementById('condiciones');
+var contenedor = document.getElementById("contenedor");
+var caja = document.getElementById("caja");
+var btn = document.getElementById("boton");
 
 //Funcion para capturar la informacion del formulario
-function capturarFormulario(e){
-    var evento = e || window.event;
+function capturarElemento(e) {
+  var evento = e || window.event;
 
-    //Hacemos que el formulario no se envie
-    if(evento.preventDefault){
-        evento.preventDefault();
-    }else{
-        evento.returnValue = false;
-    }
+  var objetivo = evento.target || evento.srcElement;
+  //Hacemos que el formulario no se envie
+  if (evento.stopPropagation) {
+    evento.stopPropagation();
+  } else {
+    evento.cancelBubble = true; // IE antiguo
+  }
 
-    //Comprobamos que los campos estan rellenos
-    if (nombre.value === ""){
-        alert('El nombre esta vacio');
-        return false;
-    } 
-    if (email.value === ""){
-        alert('El email esta vacio');
-        return false;
-    }
-    if (!checkbox.checked){
-        alert('No aceptaste las condiciones');
-        return false;
-    }
-
-    //Si todos los campos estan llenos devolvemos un log con toda la informacion
-    console.log(
-        'Nombre: ' + nombre.value + 
-        ' | Email: ' + email.value + 
-        ' | Acepto las condiciones'
-    );
+  //Comprobamos que los campos estan rellenos
+  if (objetivo.id === "contenedor") {
+    console.log("Has pulsado contenedor");
+  } else if (objetivo.id === "caja") {
+    console.log("Has pulsado caja");
+  } else if (objetivo.id === "boton") {
+    console.log("Has pulsado boton");
+  } else {
+    console.log("Has pulsado otro elemento");
+  }
 }
 
 //Cuando clicamos en el boton enviar capturamos el submit del formulario y con esto la informacion del formulario
-eventos.agregar(formulario, 'submit', capturarFormulario);
+eventos.agregar(contenedor, "click", capturarElemento);
