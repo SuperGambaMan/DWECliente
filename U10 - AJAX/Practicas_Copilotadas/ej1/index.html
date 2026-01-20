@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio AJAX Práctica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+
+    <h1>Práctica AJAX</h1>
+
+    <div class="row mt-4">
+
+        <!-- Lista -->
+        <div class="col-md-5">
+            <h2>Lista</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-body">
+                    <!-- Aquí se insertarán filas -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Detalles -->
+        <div class="col-md-6" id="detalles">
+            <h2>Detalles</h2>
+            <p><strong>Nombre:</strong> <span id="det-nombre"></span></p>
+            <p><strong>Email:</strong> <span id="det-email"></span></p>
+            <p><strong>Teléfono:</strong> <span id="det-telefono"></span></p>
+            <p><strong>Ciudad:</strong> <span id="det-ciudad"></span></p>
+            <p><strong>Empresa:</strong> <span id="det-empresa"></span></p>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
