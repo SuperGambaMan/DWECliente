@@ -1,0 +1,74 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Portátil Profesional",
+      "precio": 899,
+      "descripcion": "Portátil de alta gama ideal para desarrollo y diseño.",
+      "imagen": "../img/laptop1.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Smartphone Moderno",
+      "precio": 599,
+      "descripcion": "Teléfono inteligente con cámara avanzada.",
+      "imagen": "../img/smartphone1.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Tablet Compacta",
+      "precio": 349,
+      "descripcion": "Tablet ligera para entretenimiento y trabajo.",
+      "imagen": "../img/tablet1.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Cámara Digital",
+      "precio": 450,
+      "descripcion": "Cámara réflex con zoom óptico.",
+      "imagen": "../img/camera1.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Auriculares Inalámbricos",
+      "precio": 79,
+      "descripcion": "Auriculares Bluetooth con cancelación de ruido.",
+      "imagen": "../img/headphones1.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Monitor 24\"",
+      "precio": 179,
+      "descripcion": "Monitor LED Full HD para oficina y juegos.",
+      "imagen": "../img/monitor1.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Teclado Mecánico",
+      "precio": 99,
+      "descripcion": "Teclado con retroiluminación y switches precisos.",
+      "imagen": "../img/keyboard1.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Ratón Gaming",
+      "precio": 49,
+      "descripcion": "Ratón ergonómico con DPI ajustable.",
+      "imagen": "../img/mouse1.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Altavoz Bluetooth",
+      "precio": 59,
+      "descripcion": "Altavoz portátil con sonido potente.",
+      "imagen": "../img/speaker1.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Smartwatch",
+      "precio": 199,
+      "descripcion": "Reloj inteligente con monitor de actividad.",
+      "imagen": "../img/smartwatch1.jpg"
+    }
+  ]
+}

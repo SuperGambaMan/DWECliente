@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //Boton para pasar a la siguiente página
+    //Boton para pasar a la siguientepersonaje página
     btnMore.addEventListener("click", showMoreCharacters);
 
     //Cargamos el script en la pagina de inicio

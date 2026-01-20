@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen AJAX - DAW</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="mb-4 text-center">
+        Ejercicio 1 - XMLHttpRequest (Comunicación asíncrona)
+      </h1>
+
+      <!-- BOTONES -->
+      <div class="text-center mb-4">
+        <button id="btnXHR" class="btn btn-primary me-2">
+          Cargar con XMLHttpRequest
+        </button>
+      </div>
+
+      <!-- CONTENEDOR DE PRODUCTOS -->
+      <div id="productos" class="row">
+        <!-- Aquí se insertarán dinámicamente los productos -->
+        <div class="card" style="width: 18rem">
+          <img src="" class="card-img-top" alt="${producto.nombre}" />
+          <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">${producto.descripcion}</p>
+            <p class="fw-bold">${producto.precio} €</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

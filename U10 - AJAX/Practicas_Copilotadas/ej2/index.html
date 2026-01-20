@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de Fetch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #log p { margin: 4px 0; }
+        .ok { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        .info { color: blue; }
+    </style>
+</head>
+<body class="p-4">
+
+    <h1>Visualizador de Promesas con Fetch</h1>
+    <button id="btn-cargar" class="btn btn-primary mb-3">Cargar Usuarios</button>
+
+    <div id="log" class="mb-4"></div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-usuarios"></tbody>
+    </table>
+
+    <script src="js/script.js"> </script>
+
+</body>
+</html>
